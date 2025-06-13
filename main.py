@@ -28,6 +28,8 @@ app = FastAPI(title="TCS - CTO Interactive Hackathon Library",
 )
 
 # AS I need to connect to frontend which is hosted on different url, I need to allow cross origin resource sharing.
+origins = ["*"] # We can allow *, or add specific URL of FE. https://lms-b3xqu5y8s-samriddh-singhs-projects.vercel.app/
+
 origins = ["http://localhost:5173/", "https://lms-b3xqu5y8s-samriddh-singhs-projects.vercel.app/"] # We can allow *, or add specific URL of FE. https://lms-b3xqu5y8s-samriddh-singhs-projects.vercel.app/
 
 app.add_middleware(CORSMiddleware,
